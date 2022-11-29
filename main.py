@@ -76,9 +76,9 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-# with app.app_context():
-#     db.create_all()
-#     db.session.commit()
+with app.app_context():
+    db.create_all()
+    db.session.commit()
 
 gravatar = Gravatar(app,
                     size=100,
